@@ -12,7 +12,7 @@ class HttpClient
   def self.post(url, body = nil, headers = nil)
     payload = body.nil? ? '' : body
     response = RestClient::Request.new(method: :post, url: url,
-                                       payload: payload.to_json, headers: headers, verify_ssl: false)
+                                       payload: payload, headers: headers, verify_ssl: false)
                                   .execute {|response, _request, _result| response}
     response
   end

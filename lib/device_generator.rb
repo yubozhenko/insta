@@ -85,7 +85,7 @@ class DeviceGenerator
     }
   end
 
-  def useragent
+  def user_agent
     format('Instagram %s Android(%s)', useragent_hash[:version], useragent_hash[:agent].rstrip)
   end
 
